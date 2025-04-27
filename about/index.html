@@ -29,18 +29,36 @@
     <header>
         <img src="/images/svg/Frame 135.svg" alt="logo-smile">
         <nav class="flex">
-            <h4 class="regular size-bracket ls-small"><a href="../index.html">Home</a></h4>
+            <h4 class="regular size-bracket ls-small"><a href="/index.html">Home</a></h4>
             <h4 class="regular size-bracket ls-small">/</h4>
-            <h4 class="regular size-bracket ls-small"><a href="">Works</a></h4>
+            <h4 class="regular size-bracket ls-small"><a href="/index.html#works">Works</a></h4>
             <h4 class="regular size-bracket ls-small">/</h4>
-            <h4 class="bold size-bracket ls-small"><a href="">About</a></h4>
+            <h4 class="bold size-bracket ls-small"><a href="/about/index.html">About</a></h4>
             <h4 class="regular size-bracket ls-small">/</h4>
-            <h4 class="regular size-bracket ls-small"><a href="">Contact</a></h4>
+            <h4 class="regular size-bracket ls-small"><a href="#contact">Contact</a></h4>
         </nav>
-        <h4 class="regular size-bracket ls-small">© 2025</h4>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h4 class="regular size-bracket ls-small copyright">© 2025</h4>
+        <div class="mobile-menu nav-hidden">
+            <img src="/images/svg/Frame 135.svg" alt="logo-smile">
+            <div class="center-full-page">
+                <h4 class="regular size-bracket ls-small"><a href="/index.html">Home</a></h4>
+                <h4 class="regular size-bracket ls-small">/</h4>
+                <h4 class="regular size-bracket ls-small"><a href="/index.html#works">Works</a></h4>
+                <h4 class="regular size-bracket ls-small">/</h4>
+                <h4 class="bold size-bracket ls-small"><a href="/about/index.html">About</a></h4>
+                <h4 class="regular size-bracket ls-small">/</h4>
+                <h4 class="regular size-bracket ls-small"><a href="#contact">Contact</a></h4>
+            </div>
+            <h4 class="regular size-bracket ls-small center-text">© 2025</h4>
+        </div>
     </header>
     
-    <div class="container-intro">
+    <div class="container-intro" id="top">
         <div>
             <h1 class="extrabold size-title pink">Who Am I?</h1>
             <div class="row">
@@ -75,7 +93,7 @@
         <div class="container-inspo-image-grid">
             <div class="image-container grid-a">
                 <img src="../images/99pi.png" alt="99pi">
-                <h4 class="regular size-bracket ls-small underline"><a href="">99% INVISIBLE<br>PODCAST</a></h4>
+                <h4 class="regular size-bracket ls-small underline"><a target="_blank" href="https://99percentinvisible.org/">99% INVISIBLE<br>PODCAST</a></h4>
             </div>
             <div class="image-container grid-b">
                 <img src="../images/kurt.png" alt="kurt_vonnegut">
@@ -87,11 +105,11 @@
             </div>
             <div class="image-container grid-c">
                 <img src="../images/notboring.png" alt="notboring">
-                <h4 class="regular size-bracket ls-small underline"><a href="">Not Boring <br>Software</a></h4>
+                <h4 class="regular size-bracket ls-small underline"><a target="_blank" href="https://www.notboring.software/">Not Boring <br>Software</a></h4>
             </div>
             <div class="image-container grid-d">
                 <img src="../images/bfm.png" alt="built-for-mars">
-                <h4 class="regular size-bracket ls-small underline"><a href="">Built for mars</a></h4>
+                <h4 class="regular size-bracket ls-small underline"><a target="_blank" href="https://builtformars.com/">Built for mars</a></h4>
             </div>
         </div>
     </div>
@@ -162,14 +180,14 @@
             </div>
         </div>
     </div> -->
-    <div class="container-contact">
+    <div class="container-contact" id="contact">
         <div class="contact-text">
             <h2 class="bold ls-small">Want to reach out?</h2>
             <div>
                 <h4 class="regular size-bracket ls-small">Send me an email</h4>
                 <h4 class="regular size-bracket ls-small underline"><a href="">dfl34@drexel.edu</a></h4>
             </div>
-            <h4 class="semibold size-bracket ls-small pink underline back-to-top"><a href="">back to top</a></h4>
+            <h4 class="semibold size-bracket ls-small pink underline back-to-top"><a href="#top">back to top</a></h4>
         </div>
         <div class="contact-framing">
             <div>

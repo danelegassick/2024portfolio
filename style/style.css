@@ -34,6 +34,10 @@ body {
   color: var(--color-fg);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -366,6 +370,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: last baseline;
+}
+
+@media screen and (max-width: 600px) {
+  .container-intro {
+    height: calc(100vh - 166px);
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+  }
 }
 
 /* Works section */
