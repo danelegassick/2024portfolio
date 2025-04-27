@@ -258,7 +258,7 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--color-bg);
-  z-index: 10;
+  z-index: 20;
   border-bottom: 1px solid var(--color-bg-lines);
 }
 
@@ -271,21 +271,56 @@ header {
 /* Hamburger button for mobile view */
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 4px;
+  position: relative;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 11; /* Above mobile menu */
+  z-index: 21; /* Above mobile menu */
+  padding: 0;
 }
 
 .hamburger span {
+  display: block;
+  position: absolute;
   width: 24px;
   height: 2px;
   background-color: var(--color-fg);
-  transition: transform 0.3s ease;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.hamburger span:nth-child(1) {
+  top: 6px; /* Positioned at top third */
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px; /* Positioned in middle */
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px; /* Positioned at bottom third */
+}
+
+/* X transformation styles */
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
 /* Mobile menu (hidden by default) */
 .mobile-menu {
   position: fixed;
@@ -330,6 +365,7 @@ header {
   transform: translateY(0);
   transition: 0.3s;
 }
+
 
 .center-full-page {
   display: flex;
@@ -566,6 +602,7 @@ header {
     gap: 14rem;
     margin-left: 1vw;
     margin-right: 1rem;
+    z-index: 4;
   }
   
   .about-facts div {
@@ -1541,4 +1578,8 @@ ul {
   bottom: 16px;
   left: 24px;
   max-width: 250px;
+}
+
+.z-index {
+  z-index: 500;
 }

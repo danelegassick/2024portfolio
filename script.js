@@ -84,21 +84,40 @@ function scroll4Effect() {
   }
 }
 
-// Initial check when page loads
+// Toggle menu function
+function toggleMenu() {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const hamburger = document.querySelector('.hamburger');
+  
+  // Toggle active class on mobile menu
+  mobileMenu.classList.toggle('nav-active');
+  mobileMenu.classList.toggle('nav-hidden');
+  
+  // Toggle active class on hamburger
+  hamburger.classList.toggle('is-active');
+}
+
+// Add this to your DOMContentLoaded event handler
 document.addEventListener('DOMContentLoaded', () => {
-  // Check window size immediately
-  checkWindowSize();
+  // ... your existing code ...
   
-  // Re-check window size whenever browser is resized
-  window.addEventListener('resize', checkWindowSize);
-  
-  // Hamburger menu functionality (unchanged)
+  // Enhanced hamburger menu functionality
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
 
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('nav-active');
+    // Replace the previous click handler with the toggleMenu function
+    hamburger.addEventListener('click', toggleMenu);
+    
+    // Add click events to all mobile menu links
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Only close if menu is open
+        if (mobileMenu.classList.contains('nav-active')) {
+          toggleMenu();
+        }
+      });
     });
   }
 });
