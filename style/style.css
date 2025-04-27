@@ -1049,7 +1049,7 @@ header {
 .max-width-400 {
   max-width: 400px;
   width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 .max-width-300 {
@@ -1507,7 +1507,7 @@ ul {
   .section-images img {
       max-width: 150px;
       width: 100%;
-      height: fit-content;
+      height: auto;
   }
 
   .parameters {
